@@ -17,7 +17,7 @@ public class AddController {
     }
 
     @PostMapping("/v1/add")
-    public Response getFoo(@RequestBody Request request) throws Exception {
+    public Response add(@RequestBody Request request) throws Exception {
         return fooService.execute(request);
     }
 }
