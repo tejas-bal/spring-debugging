@@ -54,14 +54,11 @@ public class AddControllerTest {
      * We send 2 requests in this test
      * Request1 body has values 2 and 3, expectation is that response is 2 + 3 = 5
      * Request2 body has values 1 and 8, expectation is that response is 1 + 8 = 9
-     * This test fails
-     * We see for the first request:
+     * This test fails (expected and actual don't match)
      * java.lang.AssertionError: message
-     * Expected: 5
-     *      got: 9
-     *
      */
     @Test
+    @SuppressWarnings("all")
     public void testController_multipleRequests() throws Exception {
         Request request1 = new Request();
         request1.setValues(List.of(2, 3));
