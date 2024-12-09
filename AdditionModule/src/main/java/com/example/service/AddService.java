@@ -16,7 +16,7 @@ public class AddService {
     }
 
     private Response addNumbers() throws Exception {
-        // Introduce a delay of 5 seconds to mimic real time heavy processing.
+        // Introduce a delay of 5 seconds (slow backend system simulation)
         Thread.sleep(5000);
         Integer sum = this.request.getValues().stream().reduce(Integer::sum).get();
         return new Response(sum);
